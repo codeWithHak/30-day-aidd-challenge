@@ -16,6 +16,7 @@ The end goal? Build complete systems by writing only specifications. I become th
 **Start Date:** November 17, 2025  
 **End Date:** December 16, 2025  
 **Duration:** 30 Days
+**Pattern**: 15 tasks, 2 days per task
 
 ## Goal
 Master all three approaches and learn to build systems through orchestration rather than manual coding.
