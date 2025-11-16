@@ -1,4 +1,4 @@
-# AIDD: 30-Day AI-Driven Development Challenge
+# 30-Day AI-Driven Development Challenge
 
 This repo documents my 30-day challenge exploring AI-Driven Development, AI-Native Development, and Spec-Driven Development - three approaches that are reshaping how we build software.
 
