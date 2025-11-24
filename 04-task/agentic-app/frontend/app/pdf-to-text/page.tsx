@@ -46,7 +46,7 @@ export default function PDFToTextPage() {
 
 
     try {
-      const response = await axios.post<PDFResponse>(`${API_BASE_URL}/pdf/to-text`, formData, {
+      const response = await axios.post<PDFResponse>(`${API_BASE_URL}/pdf/upload`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

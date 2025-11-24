@@ -42,7 +42,7 @@ export default function TextToQuizPage() {
 
 
     try {
-      const response = await axios.post<QuizResponse>(`${API_BASE_URL}/text/to-quiz`, {
+      const response = await axios.post<QuizResponse>(`${API_BASE_URL}/quiz/generate`, {
         text: text,
       });
 
