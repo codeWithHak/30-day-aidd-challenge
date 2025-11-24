@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Sparkles, ArrowRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { Navbar } from "@/components/Navbar";
+import { Storyboard } from "@/components/Storyboard";
 
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -87,53 +88,12 @@ export default function Home() {
             </Button>
           </Link>
         </div>
-
-        {/* Feature grid */}
-        {/* <div className="grid md:grid-cols-3 gap-6 mt-20 animate-fade-in-delay">
-          {[
-            { icon: "⚡", title: "Instant", desc: "Generate quizzes in seconds" },
-            { icon: "🎯", title: "Accurate", desc: "AI-powered question creation" },
-            { icon: "📊", title: "Detailed", desc: "Comprehensive coverage" },
-          ].map((feature, idx) => (
-            <div
-              key={idx}
-              className="group p-6 border border-slate-800 hover:border-blue-500/50 bg-slate-950/50 backdrop-blur transition-all duration-300 hover:bg-slate-900/80 cursor-pointer"
-              style={{
-                animationDelay: `${idx * 100}ms`,
-              }}
-            >
-              <div className="text-3xl mb-3 group-hover:scale-110 transition-transform duration-300">
-                {feature.icon}
-              </div>
-              <h3 className="font-bold text-white mb-2">{feature.title}</h3>
-              <p className="text-sm text-slate-400">{feature.desc}</p>
-            </div>
-          ))}
-        </div> */}
-
-        {/* Footer stats */}
-        {/* <div className="flex justify-center gap-12 mt-20 text-slate-400 animate-fade-in-delay-2">
-          <div className="text-center">
-            <div className="text-2xl font-bold text-white">1000+</div>
-            <div className="text-sm">Quizzes Generated</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-white">500+</div>
-            <div className="text-sm">Active Users</div>
-          </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold text-white">99%</div>
-            <div className="text-sm">Accuracy Rate</div>
-          </div>
-        </div> */}
       </div>
 
-      {/* Scroll indicator */}
-      {/* <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <div className="w-6 h-10 border border-blue-400/30 rounded-full flex items-start justify-center p-2">
-          <div className="w-1 h-2 bg-blue-400 rounded-full animate-slide-down" />
-        </div>
-      </div> */}
+      {/* Storyboard Section */}
+      <div className="relative z-10 w-full mt-12 border-t border-gray-800/50 bg-black/50 backdrop-blur-sm">
+        <Storyboard />
+      </div>
 
       {/* Animations */}
       <style>{`
