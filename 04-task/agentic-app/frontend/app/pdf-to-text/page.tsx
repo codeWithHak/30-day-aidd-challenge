@@ -46,15 +46,14 @@ export default function PDFToTextPage() {
 
 
     try {
-      const response = await axios.post<PDFResponse>(`${API_BASE_URL}/pdf/upload`, formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      const response = await axios.post<PDFResponse>(`${API_BASE_URL}/pdf/upload`, formData);
 
       setExtractedText(response.data.text);
       setFilename(response.data.filename);
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
-      setError("Failed to extract text from PDF. Ensure the backend is running.");
+      const errorMessage = err.response?.data?.detail || "Failed to extract text from PDF. Ensure the backend is running.";
+      setError(typeof errorMessage === 'string' ? errorMessage : JSON.stringify(errorMessage));
     } finally {
       setLoading(false);
     }

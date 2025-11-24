@@ -48,9 +48,10 @@ export default function TextToQuizPage() {
 
       setQuiz(response.data.questions);
       setStep("quiz");
-    } catch (err) {
+    } catch (err: any) {
       console.error(err);
-      setError("Failed to generate quiz from text. Ensure the backend is running.");
+      const errorMessage = err.response?.data?.detail || "Failed to generate quiz from text. Ensure the backend is running.";
+      setError(typeof errorMessage === 'string' ? errorMessage : JSON.stringify(errorMessage));
     } finally {
       setLoading(false);
     }

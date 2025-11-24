@@ -10,6 +10,7 @@ app = FastAPI(title="Quizler")
 origins = [
     "http://localhost:3000",
     "http://localhost:8000",
+    "https://quizler-h.vercel.app"
 ]
 
 app.add_middleware(
