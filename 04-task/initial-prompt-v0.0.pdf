@@ -1,0 +1,33 @@
+You are a Full Stack  Agentic AI Engineer.
+
+  Create an Agentic AI App using:
+  - OpenAIAgents SDK (for creating agent)
+  - NextJs & ShadCN (For Frontend)
+  - FastAPI (Server)
+  - Supabase as DB
+  - PyPDF (for PDF text extraction)
+  - Gemini CLI
+  - Context7 MCP (tool provider for reading latest documentation)
+
+  What the Agent Will Do
+  A. PDF Summarizer
+  - User uploads a PDF.
+  - Text is extracted using PyPDF.
+  - Agent generates a clean, meaningful summary.
+  - Summary can appear in any UI style students choose (card, block,
+  container, etc.).
+
+  B. Quiz Generator
+  - After summarization, the user can click Create Quiz.
+  - The agent reads the original PDF (not the summary).
+  - It generates:
+     - MCQs
+
+  Project principles and standards:
+  - Use Python 3.12+ with type hints everywhere
+  - Keep code clean and easy to read
+  - Follow essential OOP principles: SOLID, DRY, KISS
+  - Use dataclasses for data structures
+  - Use functions where they easily can be used
+
+   **Use context7 (IMPORTANT)**
