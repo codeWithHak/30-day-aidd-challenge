@@ -53,9 +53,7 @@ export default function GenerateQuizPage() {
 
     try {
       // Upload PDF and generate quiz directly
-      const response = await axios.post<QuizResponse>(`${API_BASE_URL}/pdf/generate`, formData, {
-        headers: { "Content-Type": "multipart/form-data" },
-      });
+      const response = await axios.post<QuizResponse>(`${API_BASE_URL}/pdf/generate`, formData);
 
       setQuiz(response.data.questions);
       setStep("quiz");
